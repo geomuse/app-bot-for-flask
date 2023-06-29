@@ -25,7 +25,7 @@
         contentType: "application/json",
         data: JSON.stringify({ number: number }),
         success: function(response) {
-          $("#result").text("the results: " + JSON.stringify(response.result));
+          $("#result").text("the results : " + JSON.stringify(response.result));
         },
         error: function(error) {
           console.log(error);
