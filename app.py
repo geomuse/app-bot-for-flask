@@ -32,14 +32,19 @@ def index():
 @app.route('/calculate', methods=['POST'])
 def calculate():
     data = request.get_json()
-    number = int(data['number'])
+    number = data['number']
+    print(type(number))
+    number = int(number) 
+    print(type(number))
     # result = number * 2
     if number == 1:
         result = get_odd_numbers()
     elif number == 2:
         result = get_even_numbers()
-    else:
+    elif number > 3 :
         result = number * 2
+    else :
+        result = f'{number} not number.'
 
     return jsonify({'result': result})
 
