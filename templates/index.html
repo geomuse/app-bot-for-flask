@@ -2,18 +2,20 @@
 <html>
 <head>
   <title>flask.</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="static/css/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body class="bg">
-  
-  <div class="search-container">
-    <h1>devlopment.</h1>
-    <input class='RNNText' type="number" id="inputNumber" placeholder="input the number.">
-    <div class ='RNNButton' onclick="calculate()"><img class="svg-icon" src="img/play-solid.svg" alt="button"></div>
+  <div class="content">
+    <div class="search-container">
+      <h1 class="RNNTitle">devlopment.</h1>
+      <input class='RNNText' type="search" id="inputNumber" placeholder="input the number.">
+      <div class ='RNNButton' onclick="calculate()"><img class="svg-icon" src="/img/play-solid.svg" alt="button"></div>
+    </div>
   </div>
 
-  <p id="result"></p>
+  <p id="result" class="content-results"></p>
+
   <script>
     function calculate() {
       var number = $("#inputNumber").val();
